@@ -104,7 +104,8 @@ def test_accuracy(net, test_loader, classes):
     print("Accuracy for each class:")
     print('  '.join(f'{name:7s}' for name in classes))       # 클래스 이름들 정렬 출력
     print('  '.join(class_accuracies))                       # 정확도들 정렬 출력
-     
+    
+    return correct // total
      
 def show_prediction(net, testset, classes):
     net.eval()
@@ -132,9 +133,9 @@ def show_prediction(net, testset, classes):
 
 def train_and_test(net, trainloader, testloader, testset, classes, epochs=2):
     loss = train(net, trainloader, epochs=epochs)
-    test_accuracy(net, testloader,classes)
+    accuracy = test_accuracy(net, testloader,classes)
     show_prediction(net, testset, classes)
-    return loss
+    return loss, accuracy
 
 def draw_loss_graph_1000_iters(title, loss_list, label_list):
     # graph the all loss
