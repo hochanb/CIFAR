@@ -55,7 +55,7 @@ Project for: 4190.408, Artificial Intelligence 2025 Spring, SNU
     <td><img src="doc/resnet.png" alt="ResNet18" width="350"/></td>
   </tr>
   <tr>
-    <td><img src="doc/VGG.png" alt="VGG" width="350"/></td>
+    <td><img src="doc/vgg.png" alt="VGG" width="350"/></td>
     <td><img src="doc/accuracy.png" alt="Baseline Loss" width="350"/></td>
   </tr>
 </table>
